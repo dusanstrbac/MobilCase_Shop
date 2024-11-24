@@ -1,0 +1,39 @@
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style-position: inside;
+}
+
+li::marker {
+    color: var(--redColor);
+}
+
+:root {
+    --blackColor: #343131;
+    --redColor: #A04747;
+    --peachColor: #D8A25E;
+    --yellowColor: #EEDF7A;
+
+    --headingSize: 3rem;
+    --h2Size: clamp(1rem, 0.214rem + 3.929vw, 3.75rem);
+    --h3Size: clamp(1rem, 0.571rem + 2.143vw, 2.5rem);
+    --navigationSize: 1.3rem;
+    --pSize: 1.25rem;
+    --fontBold: 600;
+    --fontNormal: 300;
+}
+
+
+
+
+

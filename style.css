@@ -1,0 +1,342 @@
+@import url('global.css');
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blackColor);
+    color: white;
+}
+
+#headerLogo {
+    height: auto;
+    width: 200px;
+}
+
+.headerMenu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+    cursor: pointer;
+    
+    @media (max-width: 900px) {
+        display: none;
+        padding: 0;
+    }
+}
+
+.headerMenu li {
+    font-size: clamp(1rem, 0.914rem + 0.429vw, 1.3rem);
+    font-weight: 300;
+}
+
+.headerMenu button {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--redColor);
+    background-color: var(--redColor);
+    color: white;
+    cursor: pointer;
+}
+
+.headerMenu button:hover {
+    opacity: .6;
+}
+
+#PhoneMenu {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 900px) {
+        display: block;
+    }
+}
+
+#PhoneMenu:hover {
+    color: var(--redColor);
+}
+
+.Hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 70vh;
+    padding: 0 40px;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 0;
+        height: 40vh;    
+    }
+}
+
+.heroInformation {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 900px) {
+        align-items: center;
+        padding: 10px 40px;
+    }
+}
+
+.heroInformation h2 {
+    font-size: var(--h2Size);
+}
+
+.heroInformation p {
+    font-size: clamp(1rem, 0.929rem + 0.357vw, 1.25rem);
+}
+
+.CallToAction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    @media (max-width: 500px) {
+        justify-content: center;
+    }
+}
+
+#heroCTA {
+    width: 200px;
+    height: 40px;
+    border: 1px solid var(--redColor);
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: var(--redColor);
+    color: white;
+    cursor: pointer;
+}
+
+#heroCTA:hover {
+    opacity: .8;
+}
+
+#CTAP {
+    font-size: .9rem;
+    width: 50%;
+
+    @media (max-width: 25em) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.heroIlustration {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 900px) {
+        padding: 0;
+        width: auto;
+        display: none;
+    }
+}
+
+.Hero img {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    transform: rotate(10deg);
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+.Features {
+    margin-top: 50px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        padding: 0 20px;
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.featureHeading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.featureHeading h3 {
+    color: var(--redColor);
+}
+
+.feature p {
+    width: 85%;
+}
+
+
+.Details {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px 40px;
+    justify-items: center;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+.detailText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.detailText h3 {
+    font-size: clamp(1rem, 0.661rem + 1.697vw, 2.188rem);
+    color: var(--redColor);
+}
+
+.detailText p {
+    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+}
+
+.detailPhoto img {
+    width: 250px;
+    height: auto;
+    border-radius: 50px;
+    transform: rotate(15deg);
+
+    @media (max-width: 900px) {
+        transform: rotate(0deg);
+        border-radius: 0;
+    }
+}
+
+.Testemonial {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.testCard {
+    max-width: 300px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--redColor);
+    color: white;
+    border-radius: 10px;
+}
+
+.testComment {
+    padding: 15px;
+}
+
+.testUser {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    width: 100%;
+    background-color: var(--blackColor);
+    color: white;
+    padding: 5px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.testUserInfo {
+    width: 65%;
+    text-align: end;
+}
+
+.testCard img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+.FButton {
+    display: flex;
+    border: 1px solid var(--redColor);
+    background-color: var(--redColor);
+    color: white;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-size: clamp(1rem, 0.929rem + 0.357vw, 1.25rem);
+    cursor: pointer;
+}
+
+.LastCTA {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid var(--blackColor);
+    border-bottom: 1px solid var(--blackColor);
+    padding: 30px 0;
+}
+
+.LastCTA h3 {
+    font-size: var(--h3Size);
+    text-align: center;
+}
+
+.LastCTA button {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--redColor);
+    background-color: var(--redColor);
+    color: white;
+}
+
+/* URADITI MOBIL RESPONSIVE NA 900PX */
